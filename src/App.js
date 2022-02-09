@@ -1,7 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import {API} from 'aws-amplify'
+
+const myAPI = "resumefyuniqueapi";
+const path= '/resume/create-pdf';
+
+
 
 function App() {
+    const createResume=()=>{
+        API.get(myAPI, path)
+        .then(response =>{
+            console.log(response);
+        })
+    }
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +29,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={createResume} >Create Resume</button>
       </header>
     </div>
   );
