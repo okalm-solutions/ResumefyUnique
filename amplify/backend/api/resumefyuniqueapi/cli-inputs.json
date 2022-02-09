@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "paths": {
+    "/resume/fetch-pdf": {
+      "name": "/resume/fetch-pdf",
+      "lambdaFunction": "resumefyuniquefetch",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/resume/create-pdf": {
+      "name": "/resume/create-pdf",
+      "lambdaFunction": "resumefyuniquecreate",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
