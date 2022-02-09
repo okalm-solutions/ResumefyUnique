@@ -1,37 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-import {API} from 'aws-amplify'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import styled from 'styled-components';
 
-const myAPI = "resumefyuniqueapi";
-const path= '/resume/create-pdf';
+import Navbar from './components/Navbar/Navbar';
 
+import Home from './pages/Home/Home';
 
+import GlobalStyles from './globalStyles';
+import Footer from './components/Footer/Footer';
+
+const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+`;
 
 function App() {
-    const createResume=()=>{
-        API.get(myAPI, path)
-        .then(response =>{
-            console.log(response);
-        })
-    }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. yay!!!!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <button onClick={createResume} >Create Resume</button>
-      </header>
-    </div>
+    <>
+      <GlobalStyles />
+      <Router>
+        <Container>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Home />} />
+          </Routes>
+          <Footer />
+        </Container>
+      </Router>
+    </>
   );
 }
 
