@@ -1,31 +1,37 @@
 {
-  "dev": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-resumefyunique-dev-123041-authRole",
-      "UnauthRoleArn": "arn:aws:iam::238078688220:role/amplify-resumefyunique-dev-123041-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::238078688220:role/amplify-resumefyunique-dev-123041-authRole",
-      "Region": "ca-central-1",
-      "DeploymentBucketName": "amplify-resumefyunique-dev-123041-deployment",
-      "UnauthRoleName": "amplify-resumefyunique-dev-123041-unauthRole",
-      "StackName": "amplify-resumefyunique-dev-123041",
-      "StackId": "arn:aws:cloudformation:ca-central-1:238078688220:stack/amplify-resumefyunique-dev-123041/02aa5b70-89ce-11ec-bb44-0ef59629bdae",
-      "AmplifyAppId": "d22lzzd1dumb0v",
-      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-resumefyunique-dev-123041-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
-    },
-    "categories": {
-      "auth": {
-        "undefined": {}
-      },
-      "function": {
-        "resumefyuniquefetch": {
-          "deploymentBucketName": "amplify-resumefyunique-dev-123041-deployment",
-          "s3Key": "amplify-builds/resumefyuniquefetch-4d4967684c4273315838-build.zip"
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-resumefyunique-dev-123041-authRole",
+            "UnauthRoleArn": "arn:aws:iam::238078688220:role/amplify-resumefyunique-dev-123041-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::238078688220:role/amplify-resumefyunique-dev-123041-authRole",
+            "Region": "ca-central-1",
+            "DeploymentBucketName": "amplify-resumefyunique-dev-123041-deployment",
+            "UnauthRoleName": "amplify-resumefyunique-dev-123041-unauthRole",
+            "StackName": "amplify-resumefyunique-dev-123041",
+            "StackId": "arn:aws:cloudformation:ca-central-1:238078688220:stack/amplify-resumefyunique-dev-123041/02aa5b70-89ce-11ec-bb44-0ef59629bdae",
+            "AmplifyAppId": "d22lzzd1dumb0v",
+            "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-resumefyunique-dev-123041-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
         },
-        "resumefyuniquecreate": {
-          "deploymentBucketName": "amplify-resumefyunique-dev-123041-deployment",
-          "s3Key": "amplify-builds/resumefyuniquecreate-6b444c5446656e686947-build.zip"
+        "categories": {
+            "auth": {
+                "undefined": {}
+            },
+            "function": {
+                "resumefyuniquefetch": {
+                    "deploymentBucketName": "amplify-resumefyunique-dev-123041-deployment",
+                    "s3Key": "amplify-builds/resumefyuniquefetch-4d4967684c4273315838-build.zip"
+                },
+                "resumefyuniquecreate": {
+                    "deploymentBucketName": "amplify-resumefyunique-dev-123041-deployment",
+                    "s3Key": "amplify-builds/resumefyuniquecreate-6b444c5446656e686947-build.zip"
+                }
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d22lzzd1dumb0v",
+                    "type": "cicd"
+                }
+            }
         }
-      }
     }
-  }
 }
