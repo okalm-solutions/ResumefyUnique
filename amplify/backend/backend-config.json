@@ -1,46 +1,45 @@
 {
-  "function": {
-    "resumefyuniquefetch": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
-    "resumefyuniquecreate": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    }
-  },
-  "auth": {},
-  "api": {
-    "resumefyuniqueapi": {
-      "service": "API Gateway",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [
-        {
-          "category": "function",
-          "resourceName": "resumefyuniquefetch",
-          "attributes": [
-            "Name",
-            "Arn"
-          ]
+    "function": {
+        "resumefyuniquefetch": {
+            "build": true,
+            "providerPlugin": "awscloudformation",
+            "service": "Lambda"
         },
-        {
-          "category": "function",
-          "resourceName": "resumefyuniquecreate",
-          "attributes": [
-            "Name",
-            "Arn"
-          ]
+        "resumefyuniquecreate": {
+            "build": true,
+            "providerPlugin": "awscloudformation",
+            "service": "Lambda"
         }
-      ]
+    },
+    "auth": {},
+    "api": {
+        "resumefyuniqueapi": {
+            "service": "API Gateway",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": [
+                {
+                    "category": "function",
+                    "resourceName": "resumefyuniquefetch",
+                    "attributes": [
+                        "Name",
+                        "Arn"
+                    ]
+                },
+                {
+                    "category": "function",
+                    "resourceName": "resumefyuniquecreate",
+                    "attributes": [
+                        "Name",
+                        "Arn"
+                    ]
+                }
+            ]
+        }
+    },
+    "hosting": {
+        "amplifyhosting": {
+            "service": "amplifyhosting",
+            "type": "cicd"
+        }
     }
-  },
-  "hosting": {
-    "amplifyhosting": {
-      "service": "amplifyhosting",
-      "type": "cicd",
-      "lastPushTimeStamp": "2022-02-09T18:49:14.383Z"
-    }
-  }
 }

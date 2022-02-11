@@ -14,6 +14,9 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
 
+var AWS = require('aws-sdk');
+const s3 = new AWS.S3();
+
 // declare a new express app
 var app = express()
 app.use(bodyParser.json())
@@ -33,7 +36,16 @@ app.use(function(req, res, next) {
 
 app.get('/resume/fetch-pdf', function(req, res) {
   // Add your code here
-  res.json({success: 'get call succeed!', url: req.url});
+    try {
+        const Bucket = 'resumefy-database';
+        const Key = 'index.js';
+        const data = await s3.getObject({ Bucket, Key }).promise();
+        res.json({success: 'get call succeed!',body: data.Body.toString('ascii')})
+        
+    } catch (error) {
+        console.log(error)
+    }
+
 });
 
 app.get('/resume/fetch-pdf/*', function(req, res) {
