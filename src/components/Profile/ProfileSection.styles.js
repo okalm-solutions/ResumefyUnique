@@ -15,7 +15,6 @@ display: flex;
 flex-direction: column;
 width: 70%;
 height: 50vh;
-position: relative;
 justify-content: center;
 @media (min-width: 990px){
 max-width: 60%;
@@ -34,32 +33,6 @@ margin-top: 2rem;
     font-size: 3.4rem;
 }
 `
-
-export const ButtonContainer = styled.div`
-position: absolute;
-bottom: 0;
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-margin: 0 auto;
-`
-
-export const BackButton = styled.button`
-padding: 0.7rem 2.8rem;
-color: white;
-background-color: #6683E8;
-border: none;
-cursor: pointer;
-`
-export const NextButton = styled.button`
-color: white;
-padding: 0.7rem 2.8rem;
-background-color: #86ECA3;
-border: none;
-cursor: pointer;
-`
-
 export const FormInput = styled.input`
 margin-bottom: 1rem;
 margin-top: 0.1rem;

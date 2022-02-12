@@ -3,9 +3,6 @@ import {ProfileForm,
 ProfileSectionContainer, 
 Heading, 
 ProfileFormContainer, 
-ButtonContainer, 
-BackButton, 
-NextButton, 
 FormInput } from './ProfileSection.styles'
 
 const ProfileSection = () => {
@@ -23,10 +20,6 @@ const ProfileSection = () => {
             <label>Phone Number</label>
             <FormInput type="text"/>
            </ProfileForm>
-            <ButtonContainer>
-                <BackButton>Back</BackButton>
-                <NextButton>Next</NextButton>
-            </ButtonContainer>
         </ProfileFormContainer>
     </ProfileSectionContainer>
   )
