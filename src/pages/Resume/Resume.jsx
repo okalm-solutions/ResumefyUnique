@@ -1,6 +1,8 @@
 import React from 'react'
 import {useSelector, useDispatch} from 'react-redux';
 import ProfileSection from "../../components/Profile/ProfileSection"
+import EducationSection from '../../components/Education/EducationSection';
+//import
 import {BackButton, NextButton, ButtonContainer, ResumeContainer} from './Resume.styles'
 import {forward, backward, setProfile} from './ResumeSlice';
 
@@ -36,7 +38,10 @@ export function Resume() {
         case 2: 
         return(
             <ResumeContainer>
-                <h2 style={{lineHeight: "70vh", textAlign: "center"}}>Hello 2 </h2>
+                <EducationSection
+                    values={values.profile}
+                    handleChange={handleChahnge}
+                     />
                 <ButtonContainer>
                     <BackButton onClick={()=> dispatch(backward())}>Back</BackButton>
                     <NextButton onClick={()=> dispatch(forward())}>Next</NextButton>
