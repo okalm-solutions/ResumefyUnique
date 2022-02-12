@@ -15,7 +15,7 @@ const FlexCenter = css`
 export const HeaderContainer = styled.div`
   ${FlexCenterSpaceBetween}
   height: 70px;
-  padding-left: 128px;
+  padding: 2rem;
   background-color: inherit;
 `;
 
@@ -27,8 +27,12 @@ export const HeaderLogo = styled.div`
 `;
 
 export const LogoImage = styled.img`
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 19px;
   margin-right: 5px;
   background-color: inherit;
 `;
+
+export const LogoText = styled.h3`
+text-decoration: none !important;
+`

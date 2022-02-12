@@ -34,13 +34,13 @@ app.use(function(req, res, next) {
  * Example get method *
  **********************/
 
-app.get('/resume/fetch-pdf', function(req, res) {
+app.get('/resume/fetch-pdf', async function(req, res) {
   // Add your code here
     try {
         const Bucket = 'resumefy-database';
         const Key = 'index.js';
         const data = await s3.getObject({ Bucket, Key }).promise();
-        res.json({success: 'get call succeed!',body: data.Body.toString('ascii')})
+        res.json({success: 'get call succeed!!',body: data.Body.toString('ascii')})
         
     } catch (error) {
         console.log(error)
@@ -48,10 +48,10 @@ app.get('/resume/fetch-pdf', function(req, res) {
 
 });
 
-app.get('/resume/fetch-pdf/*', function(req, res) {
-  // Add your code here
-  res.json({success: 'get call succeed!', url: req.url});
-});
+// app.get('/resume/fetch-pdf/*', function(req, res) {
+//   // Add your code here
+//   res.json({success: 'get call succeed!', url: req.url});
+// });
 
 /****************************
 * Example post method *

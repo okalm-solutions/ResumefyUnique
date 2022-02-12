@@ -4,6 +4,7 @@ import {
   HeroImageContainer,
   HeroSection,
 } from './Hero.styles';
+import {Link} from 'react-router-dom'
 
 import { ButtonPrimary } from '../Buttons';
 
@@ -21,7 +22,9 @@ function Hero() {
           The most efficient and supportive way for you to learn the most
           in-demand skills, get hired and advance your career.
         </p>
-        <ButtonPrimary>Create Resume</ButtonPrimary>
+        <Link to='/profile'>
+            <ButtonPrimary>Create Resume</ButtonPrimary>
+        </Link>
       </HeroDetails>
       <HeroImageContainer>
         <HeroImage src={ComputerImage} alt='Computer' />

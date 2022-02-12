@@ -18,11 +18,11 @@
       "function": {
         "resumefyuniquefetch": {
           "deploymentBucketName": "amplify-resumefyunique-dev-123041-deployment",
-          "s3Key": "amplify-builds/resumefyuniquefetch-4d4967684c4273315838-build.zip"
+          "s3Key": "amplify-builds/resumefyuniquefetch-3548594a6277552f6f42-build.zip"
         },
         "resumefyuniquecreate": {
           "deploymentBucketName": "amplify-resumefyunique-dev-123041-deployment",
-          "s3Key": "amplify-builds/resumefyuniquecreate-64776e66524e32776377-build.zip"
+          "s3Key": "amplify-builds/resumefyuniquecreate-4d57656a6b7246542f66-build.zip"
         }
       },
       "hosting": {

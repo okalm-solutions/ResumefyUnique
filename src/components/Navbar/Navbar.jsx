@@ -1,13 +1,19 @@
-import { HeaderContainer, HeaderLogo, LogoImage } from './Navbar.styles';
+import { HeaderContainer, HeaderLogo, LogoImage, LogoText } from './Navbar.styles';
+import { Link } from 'react-router-dom';
 
 import Logo from '../../assets/file-solid.svg';
 
 function Navbar() {
   return (
     <HeaderContainer>
-      <HeaderLogo>
-        <LogoImage src={Logo} alt='Logo' /> Resumefy
-      </HeaderLogo>
+   
+        <HeaderLogo>
+        <Link to="/">
+            <LogoImage src={Logo} alt='Logo' />
+        </Link>
+            <LogoText>Resumefy</LogoText>
+        </HeaderLogo>
+    
     </HeaderContainer>
   );
 }
