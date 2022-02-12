@@ -4,6 +4,7 @@ export const ProfileSectionContainer = styled.div`
 display: flex;
 justify-content: center;
 max-width: 1200px;
+height: 70vh;
 margin: 0 auto; 
 width: 100%;
 flex-direction: column;
