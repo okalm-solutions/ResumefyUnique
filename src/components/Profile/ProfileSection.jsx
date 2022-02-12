@@ -15,15 +15,27 @@ const ProfileSection = ({handleChange, values}) => {
             <FormInput
              type="text"
              name="firstName"
-             values={values.firstName}
+             value={values.firstName}
              onChange={handleChange} 
              />
             <label>Last Name*</label>
-            <FormInput onChange={handleChange} type="text"/>
+            <FormInput
+             type="text"
+             name="lastName"
+             value={values.lastName}
+             onChange={handleChange}/>
             <label>Email</label>
-            <FormInput onChange={handleChange}type="text"/>
+            <FormInput
+            type="email"
+            name="email"
+            value={values.email} 
+            onChange={handleChange}/>
             <label>Phone Number</label>
-            <FormInput onChange={handleChange} type="text"/>
+            <FormInput
+            type='number'
+            name='phoneNumber'
+            value={values.phoneNumber}
+            onChange={handleChange}/>
            </ProfileForm>
         </ProfileFormContainer>
     </ProfileSectionContainer>

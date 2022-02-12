@@ -9,7 +9,7 @@ export const FooterSection = styled.div`
   padding-left: 2rem;
   padding-right: 2rem;
   bottom: 0;
-  height: 113px;
+  height: 73px;
   
 `;
 

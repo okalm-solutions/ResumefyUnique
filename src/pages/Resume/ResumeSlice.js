@@ -14,8 +14,9 @@ const initialState = {
         },
         profile: {
           firstName: '',
+          lastName: '',
           email: '',
-          phone: '',
+          phoneNumber: '',
           website: '',
           location: {
             address: ''
