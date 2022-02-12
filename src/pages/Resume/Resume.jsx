@@ -2,25 +2,36 @@ import React from 'react'
 import {useSelector, useDispatch} from 'react-redux';
 import ProfileSection from "../../components/Profile/ProfileSection"
 import {BackButton, NextButton, ButtonContainer, ResumeContainer} from './Resume.styles'
-import {forward, backward} from './ResumeSlice';
+import {forward, backward, setProfile} from './ResumeSlice';
+
+
 
 
 
 export function Resume() {
-    const step = useSelector((state)=> state.resume.step)
     const dispatch = useDispatch()
- 
+    const step = useSelector((state)=> state.resume.step)
+    const values = useSelector((state)=> state.resume.values)
+
+
+    const handleChahnge=(e)=>{
+        // e.preventDefault();
+        // console.log(e.target.value)
+        dispatch(setProfile(e.target));
+    }
+
     switch (step) {
         case 1:
             return (
-              
                 <ResumeContainer>
-                    <ProfileSection/>
+                    <ProfileSection
+                    values={values.profile}
+                    handleChange={handleChahnge}
+                     />
                     <ButtonContainer>
                         <NextButton onClick={()=> dispatch(forward())}>Next</NextButton>
                     </ButtonContainer>
                 </ResumeContainer>
-
               )
         case 2: 
         return(
@@ -30,8 +41,7 @@ export function Resume() {
                     <BackButton onClick={()=> dispatch(backward())}>Back</BackButton>
                     <NextButton onClick={()=> dispatch(forward())}>Next</NextButton>
                 </ButtonContainer>
-            </ResumeContainer>
-            
+            </ResumeContainer> 
         )
         case 3: 
         return(
@@ -41,8 +51,7 @@ export function Resume() {
                     <BackButton onClick={()=> dispatch(backward())}>Back</BackButton>
                     <NextButton onClick={()=> dispatch(forward())}>Next</NextButton>
                 </ButtonContainer>
-            </ResumeContainer>
-            
+            </ResumeContainer> 
         )
         case 4: 
         return(
@@ -52,8 +61,7 @@ export function Resume() {
                     <BackButton onClick={()=> dispatch(backward())}>Back</BackButton>
                     <NextButton onClick={()=> dispatch(forward())}>Next</NextButton>
                 </ButtonContainer>
-            </ResumeContainer>
-            
+            </ResumeContainer>        
         )
         case 5: 
         return(
@@ -64,7 +72,6 @@ export function Resume() {
                     <NextButton onClick={()=> dispatch(forward())}>Next</NextButton>
                 </ButtonContainer>
             </ResumeContainer>
-            
         )
         case 6: 
         return(
@@ -74,7 +81,6 @@ export function Resume() {
                     <BackButton onClick={()=> dispatch(backward())}>Back</BackButton>
                 </ButtonContainer>
             </ResumeContainer>
-            
         )
         default:
          
