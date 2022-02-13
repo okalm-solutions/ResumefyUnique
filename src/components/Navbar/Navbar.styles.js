@@ -40,4 +40,10 @@ export const LogoText = styled.h3`
 export const MenuIcon = styled.img`
   width: 18px;
   height: 12px;
+
+  display: none;
+
+  @media screen and (max-width: 1150px) {
+    display: block;
+  }
 `;

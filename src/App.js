@@ -9,13 +9,7 @@ import './App.css';
 
 import GlobalStyles from './globalStyles';
 import Footer from './components/Footer/Footer';
-<<<<<<< HEAD
-import Profile from './pages/Profile/Profile';
 import { Resume } from './pages/Resume/Resume';
-import Skills from './pages/Skills/Skills';
-=======
-import { Resume } from "./pages/Resume/Resume";
->>>>>>> experience
 
 const Container = styled.div`
   width: 100vw;

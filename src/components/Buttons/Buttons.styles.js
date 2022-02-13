@@ -1,11 +1,17 @@
 import styled, { css } from 'styled-components/macro';
 
 const ButtonStyles = css`
-  width: 279px;
-  height: 81px;
+  width: 233px;
+  height: 53px;
   font-size: 24px;
   margin-top: 26px;
   cursor: pointer;
+
+  @media screen and (max-width: 1150px) {
+    font-size: 12px;
+    width: 149px;
+    height: 39px;
+  }
 `;
 
 export const ButtonPrimary = styled.button`
