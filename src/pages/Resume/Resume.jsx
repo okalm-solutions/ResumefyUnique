@@ -1,8 +1,9 @@
 import React from 'react'
 import {useSelector, useDispatch} from 'react-redux';
+import ExperienceSection from "../../components/Experience/ExperienceSection";
 import ProfileSection from "../../components/Profile/ProfileSection"
 import {BackButton, NextButton, ButtonContainer, ResumeContainer} from './Resume.styles'
-import {forward, backward, setProfile} from './ResumeSlice';
+import {forward, backward, setProfile, setWork} from './ResumeSlice';
 
 
 
@@ -16,7 +17,6 @@ export function Resume() {
 
     const handleChahnge=(e)=>{
         // e.preventDefault();
-        // console.log(e.target.value)
         dispatch(setProfile(e.target));
     }
 
@@ -46,7 +46,10 @@ export function Resume() {
         case 3: 
         return(
             <ResumeContainer>
-                <h2 style={{lineHeight: "70vh", textAlign: "center"}}>Hello 3</h2>
+                <ExperienceSection
+                values={values.work}
+                setWork={setWork}
+                />
                 <ButtonContainer>
                     <BackButton onClick={()=> dispatch(backward())}>Back</BackButton>
                     <NextButton onClick={()=> dispatch(forward())}>Next</NextButton>

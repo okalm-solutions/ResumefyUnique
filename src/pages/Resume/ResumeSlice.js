@@ -82,12 +82,14 @@ export const resumeSlice = createSlice({
             state.step -= 1
         },
         setProfile: (state, action)=>{
-            // console.log(action.payload.name);
-            state.values.profile[action.payload.name] = action.payload.value
+          state.values.profile[action.payload.name] = action.payload.value
+        },
+        setWork: (state, action)=>{
+            state.values.work[0][action.payload.name] = action.payload.value
         }
     }
 })
 
-export const { forward, backward, setProfile } = resumeSlice.actions
+export const { forward, backward, setProfile, setWork } = resumeSlice.actions
 
 export default resumeSlice.reducer

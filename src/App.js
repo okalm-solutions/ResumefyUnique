@@ -9,7 +9,6 @@ import "./App.css"
 
 import GlobalStyles from './globalStyles';
 import Footer from './components/Footer/Footer';
-import Profile from "./pages/Profile/Profile";
 import { Resume } from "./pages/Resume/Resume";
 
 const Container = styled.div`
@@ -27,10 +26,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/profile' element={<Resume/>} />
-            {/* <Route path='/profile' element={<Profile/>} />
-            <Route path='/profile' element={<Profile/>} />
-            <Route path='/profile' element={<Profile/>} /> */}
+            <Route path='/resume' element={<Resume/>} />
           </Routes>
           <Footer />
         </Container>

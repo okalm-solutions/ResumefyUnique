@@ -22,7 +22,7 @@ function Hero() {
           The most efficient and supportive way for you to learn the most
           in-demand skills, get hired and advance your career.
         </p>
-        <Link to='/profile'>
+        <Link to='/resume'>
             <ButtonPrimary>Create Resume</ButtonPrimary>
         </Link>
       </HeroDetails>
