@@ -32,7 +32,7 @@ const ProfileSection = ({handleChange, values}) => {
             onChange={handleChange}/>
             <label>Phone Number</label>
             <FormInput
-            type='number'
+            type='string'
             name='phoneNumber'
             value={values.phoneNumber}
             onChange={handleChange}/>

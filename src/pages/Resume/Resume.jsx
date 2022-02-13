@@ -47,8 +47,7 @@ export function Resume() {
     case 3:
       return (
         <ResumeContainer>
-          {/* <h2 style={{lineHeight: "70vh", textAlign: "center"}}>Hello 3</h2> */}
-          <Skills />
+          <h2 style={{ lineHeight: '70vh', textAlign: 'center' }}>Hello 3</h2>
           <ButtonContainer>
             <BackButton onClick={() => dispatch(backward())}>Back</BackButton>
             <NextButton onClick={() => dispatch(forward())}>Next</NextButton>
@@ -59,6 +58,7 @@ export function Resume() {
       return (
         <ResumeContainer>
           <h2 style={{ lineHeight: '70vh', textAlign: 'center' }}>Hello 4</h2>
+          <Skills />
           <ButtonContainer>
             <BackButton onClick={() => dispatch(backward())}>Back</BackButton>
             <NextButton onClick={() => dispatch(forward())}>Next</NextButton>

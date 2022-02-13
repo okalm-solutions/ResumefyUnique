@@ -14,18 +14,21 @@ align-items: center;
 export const ProfileFormContainer = styled.div`
 display: flex;
 flex-direction: column;
+align-items: center;
 width: 70%;
 height: 50vh;
 justify-content: center;
 @media (min-width: 990px){
 max-width: 60%;
+align-item: center;
+he
 }
 `
 export const ProfileForm = styled.form`
 display: flex;
+width: 18rem;
+
 flex-direction: column;
-
-
 `
 export const Heading = styled.h1`
 font-size: 2rem;

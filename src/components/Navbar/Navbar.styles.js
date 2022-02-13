@@ -34,5 +34,10 @@ export const LogoImage = styled.img`
 `;
 
 export const LogoText = styled.h3`
-text-decoration: none !important;
-`
+  text-decoration: none !important;
+`;
+
+export const MenuIcon = styled.img`
+  width: 18px;
+  height: 12px;
+`;
