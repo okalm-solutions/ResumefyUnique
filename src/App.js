@@ -15,7 +15,7 @@ const Container = styled.div`
     width: 100vw;
     height: calc(100vh - 8rem);
     margin: 0 auto;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
 `;
 
