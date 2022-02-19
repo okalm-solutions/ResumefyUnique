@@ -6,11 +6,8 @@ const GlobalStyles = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         background-color: '#fff';
-       
         font-family: 'Roboto', sans-serif;
-        overflow-x: hidden;
     }
- 
-`;
+`
 
 export default GlobalStyles;
