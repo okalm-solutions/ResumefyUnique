@@ -51,6 +51,7 @@ export const DetailSectionTwo = styled.div`
     flex-direction: column-reverse;
     background: #e6e6e6;
     padding: 5rem 0;
+    margin-bottom: 4rem;
     @media (min-width: 900px) {
         display: grid;
         grid-template-columns: 1fr 1fr;
