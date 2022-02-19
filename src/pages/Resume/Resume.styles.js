@@ -2,16 +2,18 @@ import styled, { css } from 'styled-components';
 
 export const ResumeContainer = styled.div`
 position: relative;
+overflow-y: hidden;
+height: calc(100vh - 8rem);
 `
 
 export const ButtonContainer = styled.div`
-position: absolute;
-bottom: 0;
 width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
 margin: 0 auto;
+position: absolute;
+bottom: 0rem;
 `
 
 export const BackButton = styled.button`

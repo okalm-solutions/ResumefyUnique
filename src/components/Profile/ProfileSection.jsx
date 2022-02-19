@@ -42,4 +42,4 @@ const ProfileSection = ({handleChange, values}) => {
   )
 }
 
-export default ProfileSection
+export default ProfileSection;
