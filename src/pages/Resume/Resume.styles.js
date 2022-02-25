@@ -16,6 +16,16 @@ position: absolute;
 bottom: 0rem;
 `
 
+export const EducationButtonContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 10rem;
+`;
+
 export const BackButton = styled.button`
 padding: 0.7rem 2.8rem;
 color: white;

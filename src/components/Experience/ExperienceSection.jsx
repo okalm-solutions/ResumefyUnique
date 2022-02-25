@@ -8,16 +8,19 @@ import {
 } from './ExperienceSection.styles';
 
 const ExperienceSection = ({ values, setWork }) => {
-    console.log(values);
+    // console.log(values);
     const dispatch = useDispatch();
 
     const handleChange = (e) => {
         dispatch(setWork(e.target));
     };
+    // console.log(values);
     return (
+        
         <ExperienceContainer>
             <Header>Experience</Header>
             <FormContainer>
+                {/* {console.log(values)} */}
                 <ExperienceForm>
                     <label>Company Name</label>
                     <FormInput

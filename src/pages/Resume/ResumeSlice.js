@@ -95,10 +95,29 @@ export const resumeSlice = createSlice({
         },
         setWork: (state, action) => {
             state.values.work[action.payload.name] = action.payload.value;
+        },
+        setEducation: (state, action) => {
+           state.values.education[0][action.payload.name] = action.payload.value;
+            // console.log(action.payload.name);
+
+        },
+        addEducation: (state) => {
+            state.values.education.push({
+                institution: 'calgry',
+                location: '',
+                area: '',
+                studyType: '',
+                startDate: '',
+                endDate: '',
+                gpa: ''
+            });
+        },
+        removeEducation: (state, action) => {         
+            state.values.education.splice(action.payload, 1);
         }
     }
 });
 
-export const { forward, backward, setProfile, setWork } = resumeSlice.actions;
+export const { forward, backward, setProfile, setWork, addEducation, removeEducation, setEducation } = resumeSlice.actions;
 
 export default resumeSlice.reducer;
