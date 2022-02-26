@@ -25,28 +25,28 @@ const ExperienceSection = ({ values, setWork }) => {
                     <label>Company Name</label>
                     <FormInput
                         type="text"
-                        value={values.company}
+                        value={values[0].company}
                         name="company"
                         onChange={handleChange}
                     />
                     <label>Role / Title</label>
                     <FormInput
                         type="text"
-                        value={values.position}
+                        value={values[0].position}
                         name="position"
                         onChange={handleChange}
                     />
                     <label>Location</label>
                     <FormInput
                         type="text"
-                        value={values.location}
+                        value={values[0].location}
                         name="location"
                         onChange={handleChange}
                     />
                     <label>Start Date</label>
                     <FormInput
                         type="text"
-                        value={values.startDate}
+                        value={values[0].startDate}
                         name="startDate"
                         onChange={handleChange}
                     />

@@ -6,14 +6,14 @@ import Logo from '../../assets/file-solid.svg';
 function Navbar() {
   return (
     <HeaderContainer>
-   
-        <HeaderLogo>
+      <HeaderLogo to="/">
         <Link to="/">
-            <LogoImage src={Logo} alt='Logo' />
+          <LogoImage src={Logo} alt="Logo" />
         </Link>
-            <LogoText>Resumefy</LogoText>
-        </HeaderLogo>
-    
+        <Link to="/">
+          <LogoText> Resumefy </LogoText>
+        </Link>
+      </HeaderLogo>
     </HeaderContainer>
   );
 }

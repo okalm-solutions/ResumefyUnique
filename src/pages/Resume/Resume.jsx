@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import ExperienceSection from "../../components/Experience/ExperienceSection";
 import ProfileSection from "../../components/Profile/ProfileSection";
 import EducationSection from "../../components/Education/Education";
+import Projects from "../../components/Projects/Projects";
+import { API, } from 'aws-amplify'
 import {
   BackButton,
   NextButton,
@@ -21,6 +23,21 @@ export function Resume() {
     // e.preventDefault();
     dispatch(setProfile(e.target));
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const apiName= "resumefyuniqueapi";
+    const path = "/resume/create-pdf";
+
+
+    API.post(apiName, path, values)
+      .then(response => {
+        console.log(response);
+      })
+      .catch(error => {
+        console.log(error.response)
+      })
+  }
 
   switch (step) {
     case 1:
@@ -62,7 +79,7 @@ export function Resume() {
     case 4:
       return (
         <ResumeContainer>
-          <h2 style={{ lineHeight: "70vh", textAlign: "center" }}>Hello 4</h2>
+         <Projects/>
           <ButtonContainer>
             <BackButton onClick={() => dispatch(backward())}>Back</BackButton>
             <NextButton onClick={() => dispatch(forward())}>Next</NextButton>
@@ -85,6 +102,9 @@ export function Resume() {
           <h2 style={{ lineHeight: "70vh", textAlign: "center" }}>Hello 6</h2>
           <ButtonContainer>
             <BackButton onClick={() => dispatch(backward())}>Back</BackButton>
+            <NextButton onClick={handleSubmit}>
+              Submit
+            </NextButton>
           </ButtonContainer>
         </ResumeContainer>
       );

@@ -43,15 +43,6 @@ const initialState = {
                 startDate: '',
                 endDate: '',
                 highlights: ['']
-            },
-            {
-                company1: '',
-                location1: '',
-                position1: '',
-                website1: '',
-                startDate1: '',
-                endDate1: '',
-                highlights1: ['']
             }
         ],
         skills: [
@@ -94,16 +85,15 @@ export const resumeSlice = createSlice({
             state.values.profile[action.payload.name] = action.payload.value;
         },
         setWork: (state, action) => {
-            state.values.work[action.payload.name] = action.payload.value;
+            state.values.work[0][action.payload.name] = action.payload.value;
         },
         setEducation: (state, action) => {
-           state.values.education[0][action.payload.name] = action.payload.value;
-            // console.log(action.payload.name);
-
+            const {value} = action.payload;
+            state.values.education[0][action.payload.name] = value;
         },
         addEducation: (state) => {
             state.values.education.push({
-                institution: 'calgry',
+                institution: '',
                 location: '',
                 area: '',
                 studyType: '',
@@ -114,10 +104,22 @@ export const resumeSlice = createSlice({
         },
         removeEducation: (state, action) => {         
             state.values.education.splice(action.payload, 1);
+        },
+        setProjects: (state, action)=>{
+            state.values.projects[0][action.payload.name] = action.payload.value;
         }
     }
 });
 
-export const { forward, backward, setProfile, setWork, addEducation, removeEducation, setEducation } = resumeSlice.actions;
+export const { 
+    forward, 
+    backward, 
+    setProfile, 
+    setWork, 
+    addEducation,
+    removeEducation, 
+    setEducation,
+    setProjects
+} = resumeSlice.actions;
 
 export default resumeSlice.reducer;

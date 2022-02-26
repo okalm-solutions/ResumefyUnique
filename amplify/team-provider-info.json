@@ -23,6 +23,10 @@
         "resumefyuniquecreate": {
           "deploymentBucketName": "amplify-resumefyunique-dev-123041-deployment",
           "s3Key": "amplify-builds/resumefyuniquecreate-4d57656a6b7246542f66-build.zip"
+        },
+        "resumefyuniquelambdafunciton": {
+          "deploymentBucketName": "amplify-resumefyunique-dev-123041-deployment",
+          "s3Key": "amplify-builds/resumefyuniquelambdafunciton-48426a4866466d396231-build.zip"
         }
       },
       "hosting": {
