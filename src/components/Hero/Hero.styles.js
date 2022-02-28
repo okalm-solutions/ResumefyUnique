@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const HeroSection = styled.div`
     display: flex;
@@ -8,7 +8,7 @@ export const HeroSection = styled.div`
     width: 100%;
     height: 109vh;
     @media (min-width: 1500px) {
-        height: 150vh;
+        height: 100vh;
         flex-direction: row;
         div {
             flex-basis: 50%;

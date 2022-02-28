@@ -1,3 +1,6 @@
-.profile_label{
+.profile_label {
+    display: none;
+}
+body::-webkit-scrollbar {
     display: none;
 }
